@@ -1,0 +1,38 @@
+---
+interface Props {
+  text: string;
+  iconImg: string;
+}
+
+const { iconImg, text } = Astro.props;
+---
+
+<div class="col-3 justify-content-center iconContainer">
+  <span class=`icon ${iconImg}`></span>
+  <p class="d-flex justify-content-center">{text}</p>
+</div>
+
+<style>
+  .iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px auto;
+    font-weight: 700;
+
+    .icon {
+      background-color: #f8393a;
+      font-size: 35px;
+      border-radius: 50px;
+      padding: 15px;
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      text-align: center;
+    }
+  }
+</style>

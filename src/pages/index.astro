@@ -1,0 +1,180 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
+import CircleItem from "../components/CircleItem.astro";
+import FooterItem from "../components/FooterItem.astro";
+---
+
+<Layout title="BCI Landing">
+  <main>
+    <!-- Sección inicial de imagenes y 3 botones -->
+    <section class="mainSection">
+      <div class="welcomeImgs">
+        <img
+          src="../../public/images/yellowMonkey.png"
+          alt="Mono amarillo del BCI"
+        />
+
+        <img
+          src="../../public/images/titleBank.png"
+          alt="El banco esta en tus manos"
+        />
+
+        <img
+          src="../../public/images/greenMonkey.png"
+          alt="Mono verde del BCI"
+        />
+      </div>
+
+      <div class="linkButtons">
+        <LinkButton text="Que puedo hacer" color="orange" />
+        <LinkButton text="Recomendaciones Vacaciones" color="blue" />
+        <LinkButton text="Beneficios" color="green" />
+      </div>
+    </section>
+
+    <!-- Sección de descarga de la app -->
+    <section class="row d-flex justify-content-center centralSection">
+      <div
+        class="col-12 col-lg-6 d-flex justify-content-center justify-content-md-left flex-wrap"
+      >
+        <div class="col-12 AppItems">
+          <p class="AppItemsTitle">
+            <span style="">Descarga la App BCI Móvil</span> y vive la
+            experiencua de llevar tu banco a todas partes.
+          </p>
+        </div>
+
+        <!--contenedor íconos-->
+        <section class="row flex-wrap justify-content-center AppItemsSection">
+          <CircleItem text="Saldo" iconImg="fa-solid fa-piggy-bank" />
+          <CircleItem text="Transferencias" iconImg="fa-solid fa-right-left" />
+          <CircleItem text="Pagos" iconImg="fa-solid fa-file-invoice-dollar" />
+          <CircleItem text="Créditos" iconImg="fa-solid fa-sack-dollar" />
+          <CircleItem text="Tarjetas" iconImg="fa-solid fa-credit-card" />
+          <CircleItem text="Seguros" iconImg="fa-solid fa-briefcase" />
+          <CircleItem
+            text="Cajeros y sucursales"
+            iconImg="fa-solid fa-building-columns"
+          />
+          <CircleItem text="Más Servicios" iconImg="fa-solid fa-plus" />
+        </section>
+      </div>
+
+      <aside
+        class="col-12 col-lg-6 d-flex justify-content-center align-items-center monkeyBlue"
+      >
+        <img
+          src="../../public/images/blueMonkey.png"
+          alt="Mono azul de BCI con la App"
+          class="img-fluid monkeyBlue"
+        />
+      </aside>
+    </section>
+
+    <!-- Footer de la pagina -->
+    <footer class="d-flex justify-content-center flex-wrap footer">
+      <div class="col-xs-12 d-flex justify-content-center fooTitleContainer">
+        <h3>Estas vacaciones cúidate del Skimming o Clonación de Tarjetas!</h3>
+      </div>
+
+      <div class="row d-flex justify-content-center iconsContainer">
+        <FooterItem
+          icon="fa-solid fa-piggy-bank"
+          title="CONSEJO 1:"
+          text="Realiza directamente tus transacciones o mantén tu tarjeta a la vista todo el tiempo."
+        />
+
+        <FooterItem
+          icon="fa-solid fa-hand"
+          title="CONSEJO 2:"
+          text="Cuando uses cajeros automácticos cubre con tu mano la contraseña."
+        />
+
+        <FooterItem
+          icon="fa-solid fa-camera"
+          title="CONSEJO 3:"
+          text="Nunca permitas que fotografíen tus tarjetas"
+        />
+
+        <FooterItem
+          icon="fa-solid fa-face-surprise"
+          title="CONSEJO 4:"
+          text="No des nunca tu clave en voz alta."
+        />
+      </div>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1270px;
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .mainSection {
+    max-width: 960px;
+    width: 100%;
+    align-items: center;
+    margin: auto;
+
+    .welcomeImgs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .linkButtons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .centralSection {
+    margin: 80px auto 0 auto;
+
+    .AppItems {
+      .AppItemsTitle {
+        font-size: 25px;
+
+        > span {
+          font-weight: 600;
+          font-size: 30px;
+          color: #f8393a;
+        }
+      }
+
+      .AppItemsSection {
+        width: 600px;
+        margin-bottom: 150px;
+      }
+    }
+
+    .monkeyBlue {
+      max-height: 400px;
+    }
+  }
+
+  .footer {
+    margin: 80px auto 40px auto;
+    max-width: 1280px;
+    border-radius: 12px;
+    background-color: #32aed8;
+    color: white;
+
+    .fooTitleContainer h3 {
+      padding: 40px;
+      font-size: 23px;
+    }
+
+    .iconsContainer {
+      padding: 0px 100px 40px 100px;
+    }
+  }
+</style>
